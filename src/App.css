@@ -1,0 +1,175 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 0;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+:root {
+  --lg-bg-color: rgba(255, 255, 255, 0.25);
+  --lg-highlight: rgba(255, 255, 255, 0.75);
+  --lg-text: #ffffff;
+  --lg-red: #fb4268;
+  --lg-grey: #444739;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.glass-wrapper {
+  position: absolute;
+  z-index: 99;
+  border-radius: 0px;
+  will-change: transform;
+  top: 0;
+  left: 0;
+}
+
+.controls {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  height: calc(100% - 60px);
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.5);
+  font-size: 11px;
+}
+
+.controls .inner {
+  margin: 0 !important;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.range {
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+
+.range .text {
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  margin: 0;
+  z-index: 2;
+  mix-blend-mode: exclusion;
+  font-weight: bold;
+  color: #00f1ff;
+  height: 20px;
+  line-height: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  user-select: none;
+}
+
+.range input {
+  position: relative;
+  z-index: 1;
+}
+
+.wallpapers {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 300px;
+  flex-wrap: wrap;
+}
+
+.wallpapers img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
+.credits {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  text-align: left;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.github-profile {
+  color: #fff;
+}
+.github-profile:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+.github-badge {
+  display: inline-block;
+  background-color: #000;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0rem 0.6rem;
+  height: 32px;
+  color: white;
+}
+.github-badge:hover {
+  color: white;
+  background-color: #202020;
+}

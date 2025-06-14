@@ -1,0 +1,60 @@
+.liquid-glass {
+  width: var(--box-size, 300px);
+  height: var(--box-size, 300px);
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  position: absolute;
+  will-change: transform;
+  border-radius: var(--border-radius, 0px);
+}
+
+.liquid-glass .inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: var(--border-radius, 0px);
+}
+
+.liquid-glass .content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.liquid-glass .speculate {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius, 0px);
+  box-shadow: inset -10px -10px 30px rgba(0, 0, 0, 0.05),
+    inset 10px 10px 30px rgba(0, 0, 0, 0.1),
+    inset 10px 10px 30px rgba(255, 255, 255, 0.1),
+    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2),
+    inset 0px -1px 0px 0px rgba(255, 255, 255, 0.2),
+    inset var(--depth) var(--depth) 10px rgba(255, 255, 255, 0.2),
+    2px 1px 5px rgba(0, 0, 0, 0.2), 10px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.liquid-glass .filter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  backdrop-filter: blur(var(--blur));
+  filter: url(#liquidGlassFilter) saturate(var(--saturation))
+    brightness(var(--brightness));
+  background-size: cover;
+  border-radius: var(--border-radius, 0px);
+  overflow: hidden;
+}
