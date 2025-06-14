@@ -10,14 +10,9 @@ function App() {
   const [position, setPosition] = useState({ x: 100, y: 100 });
   const offset = useRef({ x: 0, y: 0 });
 
-  const wallpapers = [
-    "https://512pixels.net/wp-content/uploads/2025/06/26-Tahoe-Dark-6K-thumb.jpeg",
-    "https://512pixels.net/wp-content/uploads/2025/06/15-Sequoia-Light-thumbnail.jpg",
-    "https://512pixels.net/wp-content/uploads/2025/06/14-Sonoma-Dark-thumb.jpg",
-    "https://512pixels.net/wp-content/uploads/2025/06/13-Ventura-Dark-thumb.jpg",
-    "https://512pixels.net/wp-content/uploads/2025/06/12-Dark-thumbnail.jpg",
-    "https://512pixels.net/wp-content/uploads/2025/06/10-15-Day-thumb.jpg",
-  ];
+  const wallpapers = Array.from({ length: 5 }).map(
+    (_, index) => `/0${index + 1}.png`
+  );
 
   const pixelToPercent = (value: number, max: number) => {
     return (value / max) * 100;
