@@ -11,5 +11,3 @@ To run
     pnpm dev
 
 Enjoy!
-
-[![Fork me on GitHub](https://img.shields.io/github/forks/usuario/repositorio?style=social)](https://github.com/usuario/repositorio/fork)
