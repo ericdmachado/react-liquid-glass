@@ -1,0 +1,17 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "module": "ES2022",
+    "target": "ES2022",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "outDir": "../dist",
+    "isolatedModules": false,
+    "allowImportingTsExtensions": false,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["ES2022"],
+    "jsx": "preserve"
+  },
+  "include": ["../server/**/*"],
+  "exclude": ["../src", "../node_modules", "../build", "../dist"]
+}
