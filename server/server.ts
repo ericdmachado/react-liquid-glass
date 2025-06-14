@@ -10,7 +10,7 @@ import path from "path";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = Number(process.env.PORT) || 3000;
 const isProduction = process.env.NODE_ENV === "production";
 const publicPath = path.resolve(__dirname, "./public");
 
@@ -29,6 +29,6 @@ app.disable("x-powered-by");
 
 app.use(express.static(publicPath));
 
-app.listen(PORT, () =>
+app.listen(PORT, "0.0.0.0", () =>
   console.log(`Servidor rodando em http://localhost:${PORT}`)
 );
