@@ -250,9 +250,10 @@ function App() {
           @ericdmachado
         </a>
         <a
-          href="https://github.com/ericdmachado/react-liquid-glass/fork"
+          href="https://github.com/ericdmachado/react-liquid-glass"
           className="github-badge"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <svg
             viewBox="0 0 16 16"
